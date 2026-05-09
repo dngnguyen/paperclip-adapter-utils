@@ -1,0 +1,45 @@
+{
+  "name": "@dngnguyen/paperclip-adapter-utils",
+  "version": "0.3.1",
+  "license": "MIT",
+  "description": "Adapter utilities for Paperclip external plugins. Mirror of github.com/paperclipai/paperclip packages/adapter-utils.",
+  "homepage": "https://github.com/dngnguyen/paperclip-adapter-utils",
+  "bugs": {
+    "url": "https://github.com/dngnguyen/paperclip-adapter-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dngnguyen/paperclip-adapter-utils"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0"
+  }
+}
